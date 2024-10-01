@@ -38,3 +38,13 @@ export class StandardCalculatorModel implements ICalculatorModel {
   }
 
 }
+
+export abstract class AbstractCalculatorModelFactory {
+  public abstract createCalculatorModel(): ICalculatorModel;
+}
+
+export class StandardCalculatorModelFactory extends AbstractCalculatorModelFactory {
+  public createCalculatorModel(): ICalculatorModel {
+    return new StandardCalculatorModel();
+  }
+}

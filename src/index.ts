@@ -1,2 +1,2 @@
 
-export { StandardCalculatorModel } from './models/calculator.model';
+export { StandardCalculatorModelFactory } from './models/calculator.model';
