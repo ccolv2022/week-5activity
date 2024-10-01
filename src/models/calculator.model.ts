@@ -48,3 +48,27 @@ export class StandardCalculatorModelFactory extends AbstractCalculatorModelFacto
     return new StandardCalculatorModel();
   }
 }
+
+export class RoundingCalculator extends StandardCalculatorModel implements ICalculatorModel {
+  private nrDecimals: number;
+
+  public constructor (nrDecimals:number){
+    super();
+    this.nrDecimals = nrDecimals
+  }
+
+  
+}
+
+export class RoundingCalculatorModelFactory extends AbstractCalculatorModelFactory {
+  private nrDecimals:number;
+
+  public constructor(nrDecimals:number) {
+    super();
+    this.nrDecimals = nrDecimals;
+  }
+  public createCalculatorModel(): ICalculatorModel {
+    return new RoundingCalculator(2); // Rounding to the 2nd decimal
+  }
+}
+
