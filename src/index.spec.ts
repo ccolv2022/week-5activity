@@ -1,5 +1,6 @@
 
 import { StandardCalculatorModelFactory } from './index';
+import { RoundingCalculatorModelFactory } from './index';
 
 describe('week5-creational-DP', (): void => {
 
@@ -8,6 +9,20 @@ describe('week5-creational-DP', (): void => {
     it('CalculatorModel exists', (): void => {
 
       expect(StandardCalculatorModelFactory).toBeDefined();
+
+    });
+
+  });
+
+});
+
+describe('week5-creational-DP', (): void => {
+
+  describe('RoundingCalculatorModel', (): void => {
+
+    it('RoundingCalculatorModel exists', (): void => {
+
+      expect(RoundingCalculatorModelFactory).toBeDefined();
 
     });
 
